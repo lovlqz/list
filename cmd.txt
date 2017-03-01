@@ -1,0 +1,68 @@
+1.window+R  cmd
+2.cd   切换目录
+cd ..   切换到上一级目录
+3.D:   直接切换到D盘   cd /d
+4.ctrl+c  结束当前的命令行
+5.mkdir 创建文件夹
+6.tab  自动补全
+7. ls 显示当前目录下文件夹
+8.rm 移除文件夹 
+rm -rf 不用询问直接彻底删除文件
+9.
+
+
+
+npm init  配置项目
+npm install webpack --save-dev   把webpack依赖到当前项目工程里面去
+
+
+sass安装
+1.ruby 安装有个选项勾选上，把ruby安装依赖到全局环境
+2.软件依赖到全局环境 
+我的电脑---属性(右键)---高级系统设置---高级---环境变量---系统变量---path---复制路径
+
+3. gem install sass-3.4.2
+
+
+4.文件转译 sass index.scss:index.css
+文件监听   sass --watch index.scss:index.css
+文件夹监听 sass --watch scss：css  注意文件夹的路径
+
+
+5. gulp version ==3.9.1
+
+
+6.px单位转换为rem
+1.npm install cssgrace --save-dev     css后处理工具
+2.npm install gulp-px2rem  --save-dev
+3.npm install gulp-postcss --save-dev
+4.npm install postcss-px2rem -save-dev
+5.npm install gulp-clean --save-dev   清空
+6.npm install gulp-notify --save-dev   
+
+
+7.淘宝适配
+viewport 简单的理解，viewport是严格等于浏览器的窗口。在桌面浏览器中，viewport就是浏览器窗口的宽度高度
+
+物理像素(physical pixel)
+物理像素又被称为设备像素，他是显示设备中一个最微小的物理部件。每个像素可以根据操作系统设置自己的颜色和亮度
+
+
+设备独立像素(density-independent pixel)
+
+
+CSS像素
+CSS像素是一个抽像的单位，一般情况之下，CSS像素称为与设备无关的像素(device-independent pixel)，简称DIPs。
+
+屏幕密度
+屏幕密度是指一个设备表面上存在的像素数量，它通常以每英寸有多少像素来计算(PPI)。
+
+设备像素比(device pixel ratio) dpr
+设备像素比 ＝ 物理像素 / 设备独立像素(css px)
+
+如何获取dpr
+在JavaScript中，可以通过window.devicePixelRatio获取到当前设备的dpr。而在CSS中，可以通过-webkit-device-pixel-ratio，-webkit-min-device-pixel-ratio和 -webkit-max-device-pixel-ratio进行媒体查询，对不同dpr的设备，做一些样式适配(这里只针对webkit内核的浏览器和webview)。
+
+rem做宽度比例，viewport根据当前设备的dpr设备像素比来实现前端适配
+
+根据dpr进行放大，让当前的设备的物理像素和设备的独立像素相等
